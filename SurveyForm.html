@@ -1,0 +1,124 @@
+<!DocType <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
+        
+            h1 {
+                text-align: center;
+                padding: 20px;
+                background-color: #4285f4;
+                color: #fff;
+            }
+        
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+        
+            label {
+                font-weight: bold;
+            }
+        
+            input[type="text"],
+            input[type="date"],
+            input[type="email"],
+            input[type="tel"],
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+        
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+        
+            button[type="submit"],
+            button[type="reset"] {
+                background-color: #4285f4;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        
+            button[type="reset"] {
+                background-color: #ccc;
+            }
+        
+            button[type="submit"]:hover,
+            button[type="reset"]:hover {
+                background-color: #3367d6;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Survey Form</h1>
+        <form id="surveyform" onsubmit="submitForm()">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required> <br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required> <br>
+
+            <label for="dob">Date Of Birth: </label>
+            <input type="date" id="dob" name="dob" required> <br>
+
+            <label for="country">Country:</label>
+            <select  id="country" name="country" required> 
+                <option value="USA">USA</option>
+                <option value="india">INDIA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">CANADA</option>
+                <option value="Germany">GERMANY</option>
+                <option value="Paris">PARIS</option>
+                <option value="Europe">EUROPE</option>
+                <option value="London">LONDON</option>
+            </select><br>
+
+            <label>Gender:</label><br>
+            <input type="checkbox" id="male" name="gender" value="male">
+            <label for="male">MALE</label>
+            <input type="checkbox" id="female" name="gender" value="female">
+            <label for="female">FEMALE</label>
+            <input type="checkbox" id="others" name="gender" value="others">
+            <label for="others">OTHERS</label>
+            <br>
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required> <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required> <br>
+            <label for="mobile">Mobile Number :</label>
+            <input type="tel" id="mobile" name="mobile" required> <br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>  
+        <script >
+            function submitForm(){
+                window.alert("Form Registered Sucessfully");
+            }
+        </script>
+    </body>
+</html>
